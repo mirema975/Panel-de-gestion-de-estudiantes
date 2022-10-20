@@ -18,10 +18,10 @@ public class Estudiante {
     @Column(name = "nombre",nullable = false, length = 50)
     private String nombre;
     
-    @Column(name = "nombre",nullable = false, length = 50)
+    @Column(name = "apellido",nullable = false, length = 50)
     private String apellido;
     
-    @Column(name = "nombre",nullable = false, length = 50, unique = true)
+    @Column(name = "email",nullable = false, length = 50, unique = true)
     private String email;
 
     public Estudiante(){
@@ -30,6 +30,12 @@ public class Estudiante {
 
     public Estudiante(Long id, String nombre, String apellido, String email) {
         this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+    }
+
+    public Estudiante(String nombre, String apellido, String email) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
